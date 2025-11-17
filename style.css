@@ -1,0 +1,300 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #f8c6d9, #d5b0f5);
+  color: #333;
+}
+
+header {
+  background-color: #f1bcd3;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+h1 {
+  color: #6c4b8c;
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.buscador {
+  margin-top: 10px;
+}
+
+.buscador input {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+}
+
+.buscador button {
+  background-color: #b97ad8;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#catalogo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 en móvil */
+  gap: 25px;
+  justify-content: center;
+  padding: 30px;
+}
+
+#catalogo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 en móvil */
+  gap: 25px;
+  justify-content: center;
+  padding: 30px;
+}
+
+/* En pantallas más grandes */
+@media (min-width: 768px) {
+  #catalogo {
+    grid-template-columns: repeat(3, 1fr); /* 3 en tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  #catalogo {
+    grid-template-columns: repeat(5, 1fr); /* 5 en PC */
+  }
+}
+/* ====== Tarjeta del producto ====== */
+.producto {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* ====== Imagen del producto ====== */
+.producto img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  cursor: pointer; /* 👈 Para indicar que se puede hacer clic */
+}
+
+/* ====== Texto dentro de la tarjeta ====== */
+.producto h3 {
+  font-size: 1.2em;
+  color: #6a1b9a;
+  margin: 5px 0;
+}
+
+.producto p {
+  color: #444;
+  font-weight: bold;
+}
+
+/* ====== Botón de agregar ====== */
+.producto button {
+  background-color: #b565d9;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s;
+}
+
+.producto button:hover {
+  background-color: #8a3dc2;
+}
+
+/* ====== BOLETA LATERAL (azul y celeste) ====== */
+#boleta {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 300px;
+  height: 100vh;
+  background: linear-gradient(180deg, #b3e5fc, #81d4fa); /* 💙 degradado azul celeste */
+  color: #0d47a1; /* azul fuerte para el texto */
+  padding: 20px;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  z-index: 1000;
+  border-left: 3px solid #0288d1; /* línea decorativa */
+}
+
+#boleta h2 {
+  text-align: center;
+  border-bottom: 2px solid #0288d1;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #01579b;
+}
+
+#boleta ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#boleta li {
+  background: rgba(255, 255, 255, 0.8);
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #01579b;
+  font-weight: 500;
+}
+
+#boleta li button {
+  background: #0288d1;
+  border: none;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.3s;
+}
+
+#boleta li button:hover {
+  background: #0277bd;
+}
+
+#total {
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: center;
+  margin-top: 10px;
+  color: #01579b;
+}
+
+#finalizar {
+  background: #039be5;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#finalizar:hover {
+  background: #0288d1;
+  transform: scale(1.05);
+}
+
+/* ====== PARA QUE EL CATÁLOGO NO QUEDE TAPADO ====== */
+main, #catalogo {
+  margin-right: 0; /* Sin margen en móvil */
+}
+
+@media (min-width: 1024px) {
+  main, #catalogo {
+    margin-right: 320px; /* Margen solo en PC */
+  }
+}
+
+
+footer {
+  background-color: #727d7d; /* fondo suave */
+  text-align: center;
+  padding: 20px 0;
+  border-top: 2px solid #ddd;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Texto "© 2025 Selene Store" centrado y fuerte */
+footer p {
+  font-size: 1.1em;
+  color: #333;
+  font-weight: 700; /* más grueso */
+  margin: 5px 0;
+}
+
+/* Botón de WhatsApp */
+.whatsapp-boton {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #25D366; /* verde WhatsApp */
+  color: black;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.whatsapp-boton:hover {
+  background-color: #1ebe57;
+  transform: scale(1.05);
+}
+
+#toggleBoleta {
+  position: fixed;
+  right: 10px;
+  top: 75px;
+  background-color: #039be5;
+  color: white;
+  border: none;
+  padding: 12px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.9em;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: background-color 0.3s, transform 0.2s;
+  z-index: 1100;
+  white-space: nowrap; /* Para que no se parta el texto */
+  width: auto;
+}
+
+#toggleBoleta:hover {
+  background-color: #0277bd;
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  #toggleBoleta {
+    padding: 10px 15px;
+    font-size: 1em;
+    right: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #toggleBoleta {
+    right: 320px;
+    top: 20px;
+  }
+}
+
+.boleta-oculta {
+  transform: translateX(100%);
+  transition: transform 0.4s ease-in-out;
+}
+
+.boleta-visible {
+  transform: translateX(0);
+  transition: transform 0.4s ease-in-out;
+}
