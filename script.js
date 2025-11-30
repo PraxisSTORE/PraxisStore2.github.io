@@ -4,7 +4,7 @@ const productos = [
   
   { nombre: "Lapiz Colorido eslastico para niños 20cm", precio: 1.50, imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiCRR--IwWR1lwAU1viPyZEvGYqPTdgV2iaQ&s" },
   
-  { nombre: "Reloj de Arena Rosaaaa", precio: 9.99, imagen: "https://http2.mlstatic.com/D_NQ_NP_2X_777113-MPE82111698140_022025-F.webp" },
+  { nombre: "Reloj de Arena Rosa", precio: 9.99, imagen: "https://http2.mlstatic.com/D_NQ_NP_2X_777113-MPE82111698140_022025-F.webp" },
   
   { nombre: "ㅤReloj de Arena Morado", precio: 9.99, imagen: "https://http2.mlstatic.com/D_NQ_NP_2X_759205-MPE82111698138_022025-F.webp" },
   
